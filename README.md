@@ -11,15 +11,19 @@ A continuación encontrará las instrucciones para la instalación o migración 
 **Instrucciones**
 
 1. Crear la base de datos **servicio_empleo** y  Correr Script para creación de la base de datos. servicio_empleo.sql
-2. Cargar via FTP todos los archivos del sitio web desde el último backup creado.  
+2. Cargar via FTP todos los archivos del sitio web desde el último backup creado.
 3. Descargar desde el repositorio la última versión del código fuente por si hubo cambios.
 4. Crear usuario para la base de datos MySQL. ( servicio_empleo9 / XXXXXXXX ).
+
+El backup del  sitio web inicial se puede descargar del siguiente [link](https://www.dropbox.com/s/nzwvq5ed4fcf0v6/website_backup_Servicio%20Empleo.zip)
 
 **Administración**
 
 Para acceder al administrador de contenidos del sitio web ingrese a
 
 *http://www.dominio.com/administrator/index.php?unidad=adminempl30*
+
+El usuario y contraseña creado para el primer acceso es chipichipi / chipichipi09.
 
 **Dependencias**
 
