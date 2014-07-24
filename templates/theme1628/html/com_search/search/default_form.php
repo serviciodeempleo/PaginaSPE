@@ -1,0 +1,71 @@
+<?php
+/**
+ * @package     Joomla.Site
+ * @subpackage  com_search
+ *
+ * @copyright   Copyright (C) 2005 - 2012 Open Source Matters, Inc. All rights reserved.
+ * @license     GNU General Public License version 2 or later; see LICENSE.txt
+ */
+
+defined('_JEXEC') or die;
+
+$lang = JFactory::getLanguage();
+$upper_limit = $lang->getUpperLimitSearchWord();
+$app = JFactory::getApplication('site');
+$template = $app->getTemplate(true);
+include_once(JPATH_BASE.'/templates/'. $template->template .'/includes/functions.php');
+
+JHtml::_('bootstrap.tooltip');
+?>
+<form id="searchForm" action="<?php echo JRoute::_('index.php?option=com_search');?>" method="post">
+    <div class="row">
+        <div class="span4">
+           <div class=" ">
+              <div class="btn-group pull-left">
+                 <input type="text" name="searchword" placeholder="<?php echo JText::_('COM_SEARCH_SEARCH_KEYWORD'); ?>" id="search-searchword" size="30" maxlength="<?php echo $upper_limit; ?>" value="<?php echo $this->escape($this->origkeyword); ?>" class="inputbox" />
+             </div>
+             <div class="btn-group pull-left">
+                 <button name="Search" onclick="this.form.submit()" class="btn hasTooltip btn-primary" title="<?php echo JText::_('COM_SEARCH_SEARCH');?>"><i class="icon-search"></i></button>
+             </div>
+             <input type="hidden" name="task" value="search" />
+             <div class="clearfix"></div>
+         </div>
+     </div>
+
+     <div class="searchintro<?php echo $this->params->get('pageclass_sfx'); ?> span4">
+        <?php if (!empty($this->searchword)):?>
+        <p><?php echo JText::plural('COM_SEARCH_SEARCH_KEYWORD_N_RESULTS', '<span class="badge badge-info">'. $this->total. '</span>');?></p>
+    <?php endif;?>
+</div>
+
+<!--     <fieldset class="phrases span8">
+        <?php echo wrap_with_tag(wrap_with_span($this->escape(JText::_('COM_SEARCH_FOR'))), $template->params->get('categoryItemHeading')); ?>
+            <div class="phrases-box">
+            <?php echo $this->lists['searchphrase']; ?>
+            </div>
+        </fieldset> -->
+
+        <div class="ordering-box span4">
+            <label for="ordering" class="ordering">
+                <?php echo JText::_('COM_SEARCH_ORDERING');?>
+            </label>
+            <?php echo $this->lists['ordering'];?>
+        </div>
+
+
+        <div class="clearfix"></div>
+        <?php if ($this->total > 0) : ?>
+
+        <div class="form-limit well span12">
+          <label for="limit">
+             <?php echo JText::_('JGLOBAL_DISPLAY_NUM'); ?>
+         </label>
+         <?php echo $this->pagination->getLimitBox(); ?>
+     </div>
+     <p class="counter span12">
+      <?php echo $this->pagination->getPagesCounter(); ?>
+  </p>
+
+<?php endif; ?>
+</div>
+</form>

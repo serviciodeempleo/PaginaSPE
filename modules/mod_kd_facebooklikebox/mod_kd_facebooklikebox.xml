@@ -1,0 +1,153 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="2.5.0" method="upgrade">
+   	<name>KD Facebook LikeBox</name>
+			<author>Katie Drummond</author>
+			<creationDate>January 2014</creationDate>
+			<copyright>Copyright (C) 2014. All rights reserved.</copyright>
+			<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+			<authorEmail>info@ext.katie-drummond.com</authorEmail>
+			<authorUrl>http://ext.katie-drummond.com/ </authorUrl>
+			<version>1.0</version>
+     <description><![CDATA[Kd Facebook LikeBox for your joomla Site! ]]></description>
+	<files>
+      <filename module="mod_kd_facebooklikebox">mod_kd_facebooklikebox.php</filename>
+      <filename>mod_kd_facebooklikebox.xml</filename>
+      <filename>index.html</filename>
+      <filename>helper.php</filename>
+      <folder>tmpl</folder>	 
+	</files>		
+	<config>
+	<fields name="params">
+	            <fieldset name="basic">	
+      <field name="facebook_pagelink" type="text" default="" label="FB Page Link" description="Input your facebook Fanpage URL https://www.facebook.com/Google "/>
+		<field name="boxwidth" type="text" default="250" label="Width" description="Width" />
+		<field name="boxheight" type="text" default="400" label="Height" description="Height" />
+		<field name="fbfans" type="list" default="1" label="Show Fans" description="Show/Hide Fans Faces">
+            <option value="1">Show</option>
+            <option value="2">Hide</option>
+        </field> 
+		<field name="kdlanguage" type="list" default="en_US" label="Language" description="Select Language for the KD Likegox">				
+			<option value="cs_CZ">Czech</option>
+			<option value="cy_GB">Welsh </option>
+			<option value="da_DK">Danish</option>
+			<option value="de_DE">German</option>
+			<option value="eu_ES">Basque</option>
+			<option value="en_PI">English (Pirate) </option>
+			<option value="en_UD">English (Upside Down)</option>
+			<option value="ck_US">Cherokee </option>
+			<option value="en_US">English (US)</option>
+			<option value="es_CL">Spanish (Chile)</option>
+			<option value="es_CO">Spanish (Colombia)</option>
+			<option value="es_ES">Spanish (Spain)</option>
+			<option value="es_MX">Spanish (Mexico)</option>
+			<option value="es_VE">Spanish (Venezuela)</option>				
+			<option value="fi_FI">Finnish</option>
+			<option value="fr_FR">French (France)</option>
+			<option value="gl_ES">Galician</option>
+			<option value="hu_HU">Hungarian</option>
+			<option value="it_IT">Italian</option>
+			<option value="ja_JP">Japanese</option>
+			<option value="ko_KR">Korean</option>
+			<option value="nb_NO">Norwegian (bokmal) </option>
+			<option value="nn_NO">Norwegian (nynorsk) </option>
+			<option value="nl_NL">Dutch</option>
+			<option value="pl_PL">Polish</option>
+			<option value="pt_BR">Portuguese (Brazil) </option>
+			<option value="pt_PT">Portuguese (Portugal)</option>
+			<option value="ro_RO">Romanian</option>
+			<option value="ru_RU">Russian</option>
+			<option value="sk_SK">Slovak </option>
+			<option value="sl_SI">Slovenian </option>
+			<option value="sv_SE">Swedish</option>
+			<option value="th_TH">Thai</option>
+			<option value="tr_TR">Turkish</option>
+			<option value="ku_TR">Kurdish</option>
+			<option value="zh_CN">Simplified Chinese (China) </option>
+			<option value="zh_HK">Traditional Chinese (Hong Kong) </option>
+			<option value="zh_TW">Traditional Chinese (Taiwan) </option>
+			<option value="fb_LT">Leet Speak</option>
+			<option value="af_ZA">Afrikaans </option>
+			<option value="sq_AL">Albanian</option>
+			<option value="hy_AM">Armenian</option>
+			<option value="az_AZ">Azeri</option>
+			<option value="be_BY">Belarusian </option>
+			<option value="bn_IN">Bengali</option>
+			<option value="bs_BA">Bosnian</option>
+			<option value="bg_BG">Bulgarian</option>
+			<option value="hr_HR">Croatian</option>
+			<option value="nl_BE">Dutch (België)</option>
+			<option value="en_GB">English (UK)</option>
+			<option value="eo_EO">Esperanto</option>
+			<option value="et_EE">Estonian</option>
+			<option value="fo_FO">Faroese</option>
+			<option value="fr_CA">French (Canada) </option>
+			<option value="ka_GE">Georgian </option>
+			<option value="el_GR">Greek</option>
+			<option value="gu_IN">Gujarati</option>
+			<option value="hi_IN">Hindi</option>
+			<option value="is_IS">Icelandic</option>
+			<option value="id_ID">Indonesian</option>
+			<option value="ga_IE">Irish</option>
+			<option value="jv_ID">Javanese</option>
+			<option value="kn_IN">Kannada</option>				
+			<option value="la_VA">Latin</option>
+			<option value="lv_LV">Latvian</option>				
+			<option value="lt_LT">Lithuanian</option>
+			<option value="mk_MK">Macedonian</option>
+			<option value="mg_MG">Malagasy</option>
+			<option value="ms_MY">Malay</option>				
+			<option value="mn_MN">Mongolian</option>
+			<option value="ne_NP">Nepali </option>
+			<option value="pa_IN">Punjabi</option>
+			<option value="rm_CH">Romansh</option>				
+			<option value="sr_RS">Serbian</option>				
+			<option value="sw_KE">Swahili</option>
+			<option value="tl_PH">Filipino</option>
+			<option value="ta_IN">Tamil</option>				
+			<option value="te_IN">Telugu</option>
+			<option value="ml_IN">Malayalam</option>
+			<option value="uk_UA">Ukrainian</option>				
+			<option value="vi_VN">Vietnamese</option>
+			<option value="xh_ZA">Xhosa</option>				
+			<option value="km_KH">Khmer</option>				
+			<option value="ar_AR">Arabic</option>
+			<option value="he_IL">Hebrew</option>				
+			<option value="fa_IR">Persian</option>
+			<option value="sy_SY">Syriac</option>
+			<option value="yi_DE">Yiddish</option>				
+			<option value="se_NO">Northern Sámi</option>
+			<option value="ps_AF">Pashto</option>					
+			</field>
+		<field name="include_stream" type="list" default="0" label="Include Stream" description="Include/NO the stream of your Facebook Page.">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</field>
+		<field name="boxcolor" type="list" default="1" label="Color" description="Chooose Theme">
+            <option value="1">Light</option>
+            <option value="2">Dark</option>
+        </field> 
+		<field name="fbheader" type="list" default="2" label="FanBox Header" description="Show/Hide Header">
+            <option value="2">Show</option>
+			<option value="1">Hide</option>           
+        </field>			
+		 <field name="fbborder" type="text" default="000000" label="Box Border Color" description="Box Border Color" />
+		 <field type="spacer" default="" />
+		</fieldset>	
+		<fieldset name="advanced">
+					<field name="moduleclass_sfx" type="text"
+						label="Module Class Suffix"
+						description="A suffix for the CSS class of the module." />
+	
+					<field name="cache" type="list" default="1"
+						label="Caching" description="Selection of cache of this module" >
+						<option value="1">Use global</option>
+						<option value="0">No caching
+						</option>
+					</field>
+	
+					<field name="cache_time" type="text" default="900"
+						label="Cache Time" description="Time before the module is recached" />
+				</fieldset>
+    </fields>
+     </config>	
+</extension>
