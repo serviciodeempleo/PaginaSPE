@@ -60,7 +60,7 @@ class JConfig {
 	public $session_handler = 'database';
 	public $memcache_persist = '1';
 	public $memcache_compress = '0';
-	public $memcache_server_host = 'localhost';
+	public $memcache_server_host = '200.13.255.150';
 	public $memcache_server_port = '11211';
 	public $memcached_persist = '1';
 	public $memcached_compress = '0';
