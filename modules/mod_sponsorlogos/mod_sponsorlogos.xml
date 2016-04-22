@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension
+	type="module"
+	version="3.0.0"
+	client="site"
+	method="upgrade">
+	<name>Sponsor Logos</name>
+	<author>PluginValley http://www.pluginvalley.com</author>
+	<creationDate>October 2013</creationDate>
+	<copyright>PluginValley http://www.pluginvalley.com</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>pluginvalley@ymail.com</authorEmail>
+	<authorUrl>http://www.pluginvalley.com</authorUrl>
+	<version>1.0.2</version>
+        <description>
+<![CDATA[
+<span style="font-size:21px; color:#92D900">Sponsor Logos by PluginValley</span> 
+<br />
+<span style="font-size:17px; color:#EFB21C">Version 1.0.2</span>
+<br /><br />Show Logos of Your Sponsors
+<br /><br />
+We Make Cool Plugins For Your Websites!  <br /> <br />
+If you have any questions please never hesitate to use PluginValley Forum for Support!<br /><br />
+<a href="http://www.pluginvalley.com" style="font-size:15px;" target="_blank">Visit PluginValley for the Latest Works!</a>
+<div style="text-align:left; margin-top:10px;"><img src="../modules/mod_sponsorlogos/assets/images/logo.jpg"></div>
+<p>
+]]>			
+</description>
+        <files>
+                <filename module="mod_sponsorlogos">mod_sponsorlogos.php</filename>
+                <filename>index.html</filename>
+				<folder>assets</folder>	
+				<folder>tmpl</folder>				
+        </files>
+		<languages>
+            	<language tag="en-GB">en-GB.mod_sponsorlogos.ini</language>
+				<language tag="en-GB">en-GB.mod_sponsorlogos.sys.ini</language>
+		</languages>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="moduleclass_sfx" type="text" default="" label="Module Class Suffix" description="fieldMODULECLASSSUFFIX" />
+				<field name="jqueryload" type="list" default="1" label="MOD_SPONSORLOGOS_FIELD_JQUERYLOAD" description="MOD_SPONSORLOGOS_FIELD_JQUERYLOAD_DESC">
+							<option value="1">MOD_SPONSORLOGOS_YES</option>
+							<option value="0">MOD_SPONSORLOGOS_NO</option>
+				</field>
+				<field name="showtype" type="list" default="0" label="MOD_SPONSORLOGOS_FIELD_SHOWTYPE" description="MOD_SPONSORLOGOS_FIELD_SHOWTYPE_DESC">
+							<option value="0">MOD_SPONSORLOGOS_FIELD_FADE</option>
+							<option value="2">MOD_SPONSORLOGOS_FIELD_SLIDER2</option>
+				</field>
+				<field name="itemsnum" type="text" default="1" size="10" label="MOD_SPONSORLOGOS_FIELD_ITEMSNUM" description="MOD_SPONSORLOGOS_FIELD_ITEMSNUM_DESC" />    
+			</fieldset>
+			<fieldset name="Dimensions">
+					<field name="width" type="text" default="100px" size="10" label="MOD_SPONSORLOGOS_FIELD_WIDTH" description="MOD_SPONSORLOGOS_FIELD_WIDTH_DESC" />    
+					<field name="height" type="text" default="100px" size="10" label="MOD_SPONSORLOGOS_FIELD_HEIGHT" description="MOD_SPONSORLOGOS_FIELD_HEIGHT_DESC" />    
+					<field name="pause" type="text" size="10" default="2000" label="MOD_SPONSORLOGOS_FIELD_PAUSE" description="MOD_SPONSORLOGOS_FIELD_PAUSE_DESC" />
+					<field name="transition" type="text" size="10" default="2000" label="MOD_SPONSORLOGOS_FIELD_TRANSITION" description="MOD_SPONSORLOGOS_FIELD_TRANSITION_DESC" />
+					<field name="delay" type="text" size="10" default="2000" label="MOD_SPONSORLOGOS_FIELD_DELAYSTART" description="MOD_SPONSORLOGOS_FIELD_TRANSITION_DESC" />
+					<field name="direction" type="list" default="up" label="MOD_SPONSORLOGOS_FIELD_DIRECTION" description="MOD_SPONSORLOGOS_FIELD_DIRECTION_TARGET">
+								<option value="up">MOD_SPONSORLOGOS_FIELD_UP</option>
+								<option value="down">MOD_SPONSORLOGOS_FIELD_DOWN</option>
+					</field>
+			</fieldset>	
+			<fieldset name="Links">
+					<field name="imgfolder" type="text" size="55" default="modules/mod_sponsorlogos/assets/images/sponsors" label="MOD_SPONSORLOGOS_FIELD_IMGFOLDER" description="MOD_SPONSORLOGOS_FIELD_IMGFOLDER_DESC" />
+					<field name="testimonial" type="textarea" rows="7" cols="42" default="linux.jpg\|adobe.jpg\|coffee.jpg" label="MOD_SPONSORLOGOS_FIELD_IAMGES" description="MOD_SPONSORLOGOS_FIELD_IAMGES_DESC" />
+					<field name="target" type="list" default="_blank" label="MOD_SPONSORLOGOS_FIELD_TARGET" description="MOD_SPONSORLOGOS_FIELD_TARGET">
+								<option value="_blank">MOD_SPONSORLOGOS_FIELD_LINK1</option>
+								<option value="_self">MOD_SPONSORLOGOS_FIELD_LINK2</option>
+					</field>
+					<field name="follow" type="list" default="nofollow" label="MOD_SPONSORLOGOS_FIELD_FOLLOW" description="MOD_SPONSORLOGOS_FIELD_FOLLOW">
+								<option value="nofollow">MOD_SPONSORLOGOS_FIELD_FOLLOW1</option>
+								<option value="dofollow">MOD_SPONSORLOGOS_FIELD_FOLLOW2</option>
+					</field>	
+					<field name="link" type="textarea" rows="5" cols="42" default="http://www.ubuntu.com \| http://www.adobe.com \| http://www.nescafe.com " label="MOD_SPONSORLOGOS_FIELD_URLS" description="MOD_SPONSORLOGOS_FIELD_URLS_DESC" />
+			</fieldset>
+		</fields>
+	</config>
+</extension>

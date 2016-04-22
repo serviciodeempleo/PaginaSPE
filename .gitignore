@@ -1,0 +1,12 @@
+*~
+.buildpath
+.project
+.settings/
+tests/system/servers/configdef.php
+tests/system/screenshots
+logs/error.php
+administrator/cache/*
+*.patch
+*.diff
+sftp-config.json
+images/*
