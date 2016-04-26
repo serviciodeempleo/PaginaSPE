@@ -13,7 +13,11 @@ class JConfig {
 	public $debug_lang = '0';
 	public $dbtype = 'mysql';
 	public $host = '127.0.0.1';
+<<<<<<< HEAD
 	public $user = 'servicio_empleo9'; 
+=======
+	public $user = 'servicio_empleo9';
+>>>>>>> 6dec48c6b68bfc91468dcad2afd0df6db56fb1df
 	public $password = 'sev287dDRGkl09zA3';
 	public $db = 'servicio_empleo';
 	public $dbprefix = 'empl30_';

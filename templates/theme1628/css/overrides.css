@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 .manager.thumbnails > li{
   float: left;
@@ -6,4 +7,14 @@
 
 .filter .btn-toolbar {
 overflow: hidden;
+=======
+
+.manager.thumbnails > li{
+  float: left;
+  margin: 0 0 9px 25px;
+}
+
+.filter .btn-toolbar {
+overflow: hidden;
+>>>>>>> 6dec48c6b68bfc91468dcad2afd0df6db56fb1df
 }
